@@ -1,3 +1,5 @@
+package ija.ija2023.homework1.common;
+
 public interface Environment {
     boolean addRobot(Robot robot);
 

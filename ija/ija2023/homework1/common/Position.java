@@ -1,3 +1,5 @@
+package ija.ija2023.homework1.common;
+
 public class Position {
     private final int x;
     private final int y;
@@ -25,6 +27,13 @@ public class Position {
 
     public int getY() {
         return y;
+    }
+
+    public Position move(int angle) {
+        int x = (int)Math.round(Math.cos(-(angle - 90) / 180. * Math.PI));
+        int y = (int)Math.round(Math.sin(-(angle - 90) / 180. * Math.PI));
+        System.out.println("angle: " + angle + "  " + x + "x " + y + "y");
+        return Position.xy(this.x + x, this.y - y);
     }
 
     @Override
